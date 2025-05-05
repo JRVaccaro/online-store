@@ -112,6 +112,36 @@ public class Store {
     }
 
     public static void displayCart(ArrayList<Product> cart, Scanner scanner, double totalAmount) {
+
+      for (Product product : cart){
+          System.out.println(product.toString());
+
+      }
+
+      totalAmount = 0;
+      for (Product product : cart){
+          totalAmount += product.getPrice();
+      }
+        System.out.println("Total amount: " + totalAmount);
+
+
+        System.out.println("If you would like to remove an item, please enter the ID");
+      String id = scanner.nextLine().trim();
+
+      Product selectedProduct = findProductById(id, cart);
+
+
+            if (selectedProduct != null){
+                cart.remove(selectedProduct);
+                System.out.println("Product has been removed from cart");
+            }else {
+                System.out.println("Sorry product ID was invalid");
+            }
+
+
+
+
+
         // This method should display the items in the cart ArrayList, along
         // with the total cost of all items in the cart. The method should
         // prompt the user to remove items from their cart by entering the ID
