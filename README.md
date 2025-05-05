@@ -6,8 +6,6 @@ Briefly describe what this Java console application does. Mention its purpose an
 -
 
 ## User Stories
-
-
 - As a user, I want to see a home screen with clear options, so that I know what actions I can take.
 - As a user, I want to see a list of products that are available, so that I can choose which product to buy.
 - As a user, I want to view the items in my cart, so that I can see what I’m buying and how much it will cost in total.
@@ -30,18 +28,18 @@ Follow these steps to get your application running within IntelliJ IDEA:
 2. Select "Open" and navigate to the directory where you cloned or downloaded the project.
 3. After the project opens, wait for IntelliJ to index the files and set up the project.
 4. Find the main class with the `public static void main(String[] args)` method.
-5. Right-click on the file and select 'Run 'YourMainClassName.main()'' to start the application.
+5. Right-click on the file and select 'Run 'Store.main()'' to start the application.
 
 ## Technologies Used
 
-- Java: Mention the version you are using.
-- Any additional libraries or frameworks used in the project.
+- Java 17
+- Intellij IDEA
 
 ## Demo
 
 Include screenshots or GIFs that show your application in action. Use tools like [Giphy Capture](https://giphy.com/apps/giphycapture) to record a GIF of your application.
 
-![Application Screenshot](path/to/your/screenshot.png)
+
 
 ## Future Work
 
@@ -51,21 +49,19 @@ Outline potential future enhancements or functionalities you might consider addi
 - Improvement of current functionalities.
 
 ## Resources
-
-List resources such as tutorials, articles, or documentation that helped you during the project.
+- [ChatGPT](https://openai.com/chatgpt) by OpenAI – for assistance with coding guidance, debugging, and understanding Java concepts.
+- [GeeksforGeeks](https://www.geeksforgeeks.org/) – for reference articles and tutorials that helped deepen my understanding of programming topics.
+- [Ray Maroun's GitHub](https://github.com/RayMaroun) – for code examples and guidance throughout the project.
 
 - [Java Programming Tutorial](https://www.example.com)
 - [Effective Java](https://www.example.com)
 
 ## Team Members
 
-- **Name 1** - Specific contributions or roles.
-- **Name 2** - Specific contributions or roles.
+- **Julianna Vaccaro** -Developed this workshop as part of Java programming course to practice file handling, user input, and menu-driven applications..
 
 ## Thanks
+- Thank you to my instructor, Raymond, for providing the skeleton code and for your continuous support and guidance throughout the project.
 
-Express gratitude towards those who provided help, guidance, or resources:
-
-- Thank you to [Mentor's Name] for continuous support and guidance.
-- A special thanks to all teammates for their dedication and teamwork.
+- Thank you to my peers for always being willing to listen and support me when I needed it.
  

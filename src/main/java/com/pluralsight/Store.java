@@ -84,6 +84,26 @@ public class Store {
     }
 
     public static void displayProducts(ArrayList<Product> inventory, ArrayList<Product> cart, Scanner scanner) {
+
+            //Loops through then shows all products
+        for (Product product : inventory){
+            System.out.println(product.toString());
+
+        }
+        System.out.println("Please enter the ID of the product you want to add to your cart");
+        String id = scanner.nextLine().trim();
+
+        Product selectedProduct = findProductById(id,inventory);
+
+            //seeing if product was found or not
+        if (selectedProduct != null) {
+            cart.add(selectedProduct);
+            System.out.println("Product has been added to cart.");
+        }else {
+            System.out.println("Sorry product ID was invalid.");
+        }
+
+
         // This method should display a list of products from the inventory,
         // and prompt the user to add items to their cart. The method should
         // prompt the user to enter the ID of the product they want to add to
