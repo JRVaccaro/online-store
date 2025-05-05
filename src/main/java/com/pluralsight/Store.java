@@ -149,18 +149,55 @@ public class Store {
         // variable accordingly.
     }
 
-    public static void checkOut(ArrayList<Product> cart, double totalAmount) {
-        // This method should calculate the total cost of all items in the cart,
-        // and display a summary of the purchase to the user. The method should
-        // prompt the user to confirm the purchase, and calculate change and clear the cart
-        // if they confirm.
+    public static void checkOut(ArrayList<Product> cart, double totalAmount, Scanner scanner) {
+
+        totalAmount = 0;
+
+        for (Product product : cart) {
+            System.out.println(product.toString());
+            totalAmount += product.getPrice();
+
+        }
+        System.out.println("Total amount: " + totalAmount);
+
+        System.out.println("Would you like to checkout? Yes or No?");
+        String answer = scanner.nextLine().trim();
+        if (answer.equalsIgnoreCase("yes")) {
+            System.out.println("Please enter payment amount: ");
+            double payment = Double.parseDouble(scanner.nextLine().trim());
+
+            if (payment >= totalAmount) {
+                double change = payment - totalAmount; //calculating change
+                System.out.println("Thank you for your payment, you change is: " + change);
+
+
+                cart.clear(); //clearing out cart
+                System.out.println("Cart is now empty. Have a nice day.");
+            } else {
+                System.out.println("Checkout invalid not enough funds.");
+            }
+        } else if (answer.equalsIgnoreCase("no")) {
+            System.out.println("Checkout canceled. You can keep shopping.");
+        } else {
+            System.out.println("Invalid option. Please enter yes or no.");
+        }
+
     }
+    // This method should calculate the total cost of all items in the cart,
+    // and display a summary of the purchase to the user. The method should
+    // prompt the user to confirm the purchase, and calculate change and clear the cart
+    // if they confirm.
 
     public static Product findProductById(String id, ArrayList<Product> inventory) {
+        for (Product product : inventory){
+            if (product.getId().equals(id)){
+                return product; //return product if ID matches
+            }
+        }
+        return null; // if no product with ID is found
         // This method should search the inventory ArrayList for a product with
         // the specified ID, and return the corresponding com.pluralsight.Product object. If
         // no product with the specified ID is found, the method should return
         // null.
-        return null;
     }
 }
