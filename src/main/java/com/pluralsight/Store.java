@@ -125,21 +125,31 @@ public class Store {
         System.out.println("Total amount: " + totalAmount);
 
 
-        System.out.println("If you would like to remove an item, please enter the ID");
+        System.out.println("If you would like to remove an item, please enter the ID or press enter to skip");
       String id = scanner.nextLine().trim();
 
-      Product selectedProduct = findProductById(id, cart);
+
+      if (!id.isEmpty()) {
+          Product selectedProduct = findProductById(id, cart);
 
 
-            if (selectedProduct != null){
-                cart.remove(selectedProduct);
-                System.out.println("Product has been removed from cart");
-            }else {
-                System.out.println("Sorry product ID was invalid");
+          if (selectedProduct != null) {
+              cart.remove(selectedProduct);
+              System.out.println("Product has been removed from cart");
+          } else {
+              System.out.println("Sorry product ID was invalid");
+          }
+      }
+        System.out.println("Would you like to check out? Yes/No");
+            String answer = scanner.nextLine().trim();
+            if (answer.equalsIgnoreCase("yes")){
+                checkOut(cart, totalAmount, scanner); //calling to check out method
+            } else if (answer.equalsIgnoreCase("no")) {
+                System.out.println("You can continue shopping.");
+
+            } else {
+                System.out.println("Invalid. Please enter yes or no");
             }
-
-
-
 
 
         // This method should display the items in the cart ArrayList, along
@@ -160,9 +170,7 @@ public class Store {
         }
         System.out.println("Total amount: " + totalAmount);
 
-        System.out.println("Would you like to checkout? Yes or No?");
-        String answer = scanner.nextLine().trim();
-        if (answer.equalsIgnoreCase("yes")) {
+        {
             System.out.println("Please enter payment amount: ");
             double payment = Double.parseDouble(scanner.nextLine().trim());
 
@@ -176,10 +184,7 @@ public class Store {
             } else {
                 System.out.println("Checkout invalid not enough funds.");
             }
-        } else if (answer.equalsIgnoreCase("no")) {
-            System.out.println("Checkout canceled. You can keep shopping.");
-        } else {
-            System.out.println("Invalid option. Please enter yes or no.");
+
         }
 
     }
@@ -190,7 +195,7 @@ public class Store {
 
     public static Product findProductById(String id, ArrayList<Product> inventory) {
         for (Product product : inventory){
-            if (product.getId().equals(id)){
+            if (product.getId().equalsIgnoreCase(id)){
                 return product; //return product if ID matches
             }
         }

@@ -1,9 +1,7 @@
 Online Store
 ## Description of the Project
 
-Briefly describe what this Java console application does. Mention its purpose and who the intended users are. Explain the main functionality and what problems it aims to solve.
-
--
+- This is a simple Java console app that lets users shop from a list of products. You can add items to your cart, view or remove them, and check out when you're ready. It reads products from a file and handles basic input and payments.
 
 ## User Stories
 - As a user, I want to see a home screen with clear options, so that I know what actions I can take.
@@ -13,7 +11,14 @@ Briefly describe what this Java console application does. Mention its purpose an
 - As a user, I want to have an exit option in the menu, so that I can close the application when I’m finished.
 ## Setup
 
-Instructions on how to set up and run the project using IntelliJ IDEA.
+You’ll be prompted to choose from the following options:
+
+- Show Products: View the available products and add items to your cart by entering their ID.
+
+- Show Cart: See what’s in your cart, remove items if needed, and choose to check out.
+
+- Exit: Leave the application.
+
 
 ### Prerequisites
 
@@ -37,7 +42,7 @@ Follow these steps to get your application running within IntelliJ IDEA:
 
 ## Demo
 
-Include screenshots or GIFs that show your application in action. Use tools like [Giphy Capture](https://giphy.com/apps/giphycapture) to record a GIF of your application.
+![Online Store Recording.gif](Gif%20Demo/Online%20Store%20Recording.gif)
 
 
 
@@ -45,16 +50,12 @@ Include screenshots or GIFs that show your application in action. Use tools like
 
 Outline potential future enhancements or functionalities you might consider adding:
 
-- Additional feature to be developed.
-- Improvement of current functionalities.
-
+- Make the product list look cleaner with better formatting
+- Add more error handling
 ## Resources
 - [ChatGPT](https://openai.com/chatgpt) by OpenAI – for assistance with coding guidance, debugging, and understanding Java concepts.
 - [GeeksforGeeks](https://www.geeksforgeeks.org/) – for reference articles and tutorials that helped deepen my understanding of programming topics.
 - [Ray Maroun's GitHub](https://github.com/RayMaroun) – for code examples and guidance throughout the project.
-
-- [Java Programming Tutorial](https://www.example.com)
-- [Effective Java](https://www.example.com)
 
 ## Team Members
 
